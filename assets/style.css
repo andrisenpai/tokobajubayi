@@ -12,12 +12,14 @@ body{
 .divider{
     height: 75px;
     background-color: whitesmoke;
+
 }
 .featured .box{
     padding: 10px;
     border: 1px solid #91C8E4;
     border-radius: 10px;
     margin-bottom: 20px;
+    min-height: 200px;
 }
 .featured .icon>.img-icon{
     width: 50px!important;
@@ -41,6 +43,9 @@ body{
 .bg-custom {
     background-color: whitesmoke !important;
 }
+.bg-pink{
+    background-color: #FF2171;
+}
 .btn-custom{
     background-color: #FF2171;
     color: whitesmoke;
@@ -51,4 +56,7 @@ body{
 .btn-custom:hover{
     background-color: #FF90BB;
     color: black
+}
+.border-pink{
+    border: 1px solid #FF2171;
 }

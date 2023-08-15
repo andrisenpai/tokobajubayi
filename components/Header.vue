@@ -1,6 +1,6 @@
 <template>
     <div>
-        <nav class="navbar navbar-expand-lg bg-custom">
+        <nav class="navbar navbar-expand-lg fixed-top bg-custom shadow-md">
             <div class="container">
                 <a class="navbar-brand" href="#">
                     <img src="/girl.png" alt="Bootstrap" width="30" height="24"><span class="ms-1 logo-text">Adiba</span><span class="logo-text" style="color: #4682A9;text-shadow: 0px -1px #000;">Store</span> 
@@ -22,7 +22,7 @@
                         </li>
                     </ul>
                     <span class="navbar-text">
-                        <button class="btn btn-custom"><img src="~/assets/icon/crown.png" alt="" class="icon pb-1"> Daftar Member</button>
+                        <a class="btn btn-custom" href="#daftar_reseller"><img src="~/assets/icon/crown.png" alt="" class="icon pb-1"> Daftar Member</a>
                     </span>
                 </div>
             </div>
@@ -34,4 +34,5 @@
 .icon {
     height: 24px;
 }
+
 </style>

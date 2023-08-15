@@ -2,10 +2,10 @@
   <div>
     <!-- carousel -->
     <banner />
-    <div class="divider"></div>
+    <div class="divider shadow-sm"></div>
     <featured />
-    <contact-us />
-    <best-seller />
+    <div id="daftar_reseller" class="divider shadow-sm"></div>
+    <contact-us id="daftar_reseller" />
   </div>
 </template>
 
