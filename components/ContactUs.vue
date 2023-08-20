@@ -91,7 +91,7 @@
         </div>
     </div>
 </template>
-<style scoped>
+<style lang="scss" scoped>
 .contact-us {
     background-image: url('~/assets/image/background-2.jpg');
     background-repeat: no-repeat;
@@ -100,5 +100,8 @@
 
 .contact-us .description {
     font-size: 20px;
+}
+.contact-us .col>.card{
+    min-height: 350px;
 }
 </style>
