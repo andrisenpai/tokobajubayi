@@ -1,5 +1,5 @@
 <template>
-    <div class="footer">
+    <div class="footer mt-3">
         <!-- <div class="footer-banner">
             <div class="description">
 
