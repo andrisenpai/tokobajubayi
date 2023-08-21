@@ -19,7 +19,7 @@ export default {
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap', crossorigin: true },
-      { href:"https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap", rel:"stylesheet"}
+      { href: "https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap", rel: "stylesheet" }
     ],
 
     script: [
@@ -35,6 +35,9 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
   ],
+  axios:{
+    proxy: true
+  },
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -44,7 +47,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-    modules: ['@nuxtjs/axios'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/proxy'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

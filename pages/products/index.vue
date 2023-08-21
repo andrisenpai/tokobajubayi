@@ -13,9 +13,9 @@
                     <div class="card" style="width: 18rem;">
                         <img :src="item.image_link" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                                the card's content.</p>
+                            <h5 class="card-title">{{ item.title }}</h5>
+                            <p class="card-text">{{'Rp '  + item.sale_price.toString().replace(/(\d)(?=(\d{3})+(?:\.\d+)?$)/g, "$1\.") }} / <small class="strike">{{'Rp ' + item.price.toString().replace(/(\d)(?=(\d{3})+(?:\.\d+)?$)/g, "$1\.")}}</small></p>
+                            <p>{{ item.description }}</p>
                             <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>

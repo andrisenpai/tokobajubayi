@@ -60,3 +60,6 @@ body{
 .border-pink{
     border: 1px solid #FF2171;
 }
+.strike{
+    text-decoration: line-through;
+}
