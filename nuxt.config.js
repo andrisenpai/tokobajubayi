@@ -47,7 +47,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/axios', '@nuxtjs/proxy'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/proxy', '@nuxt/image',],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

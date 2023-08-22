@@ -24,7 +24,7 @@
                             <div class="col-md-4 mt-3 mb-3 d-flex" v-for="(item, index) in backpackData" :key="item.id"
                                 v-if="index < showProduct">
                                 <div class="card">
-                                    <img :src="item.image_link_1" class="card-img-top" alt="...">
+                                    <nuxt-img :src="item.image_link_1" class="card-img-top" :alt="item.title"/>
                                     <div class="card-body">
                                         <h5 class="card-title">{{ item.title }}</h5>
                                         <p class="card-text">{{ 'Rp ' +
