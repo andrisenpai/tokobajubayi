@@ -12,11 +12,5 @@
 <script>
 export default {
   name: 'IndexPage',
-  meta: [
-    {
-      name: 'google-site-verification',
-      content: '8SCObHfkQAr7VuZ11_JUtmZg6B2V4wAJVc1CnrJLhtU'
-    }
-  ]
 }
 </script>

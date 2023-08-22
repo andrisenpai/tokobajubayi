@@ -11,7 +11,9 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Kami menyediakan berbagai jenis Tas Selempang, Tas Sekolah, Tas Kerja untuk menemani keseharian Kamu' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
+      {name: 'google-site-verification',
+      content: '8SCObHfkQAr7VuZ11_JUtmZg6B2V4wAJVc1CnrJLhtU'}
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
