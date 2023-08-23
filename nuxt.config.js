@@ -50,7 +50,11 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ['@nuxtjs/axios', '@nuxtjs/proxy', '@nuxt/image',],
+  plugins: [
+    { src: '~/plugins/persist', ssr: false },
+    { src: '~/plugins/owl', ssr: false },
 
+  ],
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   }

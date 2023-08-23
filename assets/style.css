@@ -1,36 +1,43 @@
-body{
+body {
     font-family: 'Fira Sans', sans-serif;
 }
-.logo-text{
+
+.logo-text {
     font-size: 20px;
     font-family: 'Kaushan Script', cursive;
     font-weight: 600;
 }
-.nuxt-link-exact-active{
+
+.nuxt-link-exact-active {
     border-bottom: 3px solid #FF90BB;
 }
-.divider{
+
+.divider {
     height: 75px;
     background-color: whitesmoke;
 
 }
-.featured .box{
+
+.featured .box {
     padding: 10px;
     border: 1px solid #91C8E4;
     border-radius: 10px;
     margin-bottom: 20px;
     min-height: 200px;
 }
-.featured .icon>.img-icon{
-    width: 50px!important;
-    height: 50px!important;
+
+.featured .icon>.img-icon {
+    width: 50px !important;
+    height: 50px !important;
 }
-.featured .icon>.title{
+
+.featured .icon>.title {
     font-size: 20px;
     font-weight: 600;
     border-bottom: 3px solid #91C8E4;
 }
-.title{
+
+.title {
     font-size: 32px;
     font-weight: 600;
     border-bottom: 3px solid #91C8E4;
@@ -40,26 +47,67 @@ body{
     display: flexbox;
     text-transform: uppercase;
 }
+
 .bg-custom {
     background-color: whitesmoke !important;
 }
-.bg-pink{
+
+.bg-pink {
     background-color: #FF2171;
 }
-.btn-custom{
+
+.btn-custom {
     background-color: #FF2171;
     color: whitesmoke;
 }
-.btn-custom::after{
+
+.btn-custom::after {
     content: ' ⇀';
 }
-.btn-custom:hover{
+
+.btn-custom:hover {
     background-color: #FF90BB;
     color: black
 }
-.border-pink{
+
+.border-pink {
     border: 1px solid #FF2171;
 }
-.strike{
+
+.strike {
     text-decoration: line-through;
+}
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+    width: 50px;
+    background: #222!important;
+    color: #FF2171 !important;
+    border: none;
+    padding: 0 !important;
+    font: 20px !important;
+    transition: 0.3s;
+}
+.owl-carousel .owl-nav button.owl-prev:hover,
+.owl-carousel .owl-nav button.owl-next:hover{
+    width: 50px;
+    background: #FF2171!important;
+    color: #222 !important;
+    border: none;
+    padding: 0 !important;
+    font: 20px !important;
+    transition: 0.3s;
+}
+.owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+    background-color:#FF2171 !important;
+   transition: 0.3s;
+}
+.owl-dots .owl-dot span{
+    border-radius: 0 !important;
+   transition: 0.3s;
+}
+.owl-dots .owl-dot.active span{
+    border-radius: 0 !important;
+    width: 50px !important;
+   transition: 0.3s;
 }

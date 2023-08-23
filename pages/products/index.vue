@@ -32,13 +32,13 @@
                                             <small class="strike">{{ 'Rp ' +
                                                 item.price.toString().replace(/(\d)(?=(\d{3})+(?:\.\d+)?$)/g,
                                                     "$1\.") }}</small></p>
-                                        <p>{{ item.description }}</p>
+                                        <p>{{ item.description.substring(0,50) }} . . . </p>
                                     </div>
                                 </div>
-                                <div class="group-button d-block">
-                                    <nuxt-link :to="'/products?title=' + item.title.replaceAll(' ', '-')"
+                                <div class="group-button d-block my-auto">
+                                    <nuxt-link :to="'/products/'+item.category+'/' + item.title.replaceAll(' ', '-')+'?'+item.id"
                                         class="btn btn-custom m-2">Detail</nuxt-link>
-                                    <a :href="'https://api.whatsapp.com/send?phone=6281320453725' + '&text=Hallo Adiba Store ! Saya ingin membeli produk ' + item.title + '. Boleh minta informasi selengkapnya?'"
+                                    <a :href="'https://api.whatsapp.com/send?phone=6281320453725' + '&text=Hallo Adiba Store ! Saya ingin membeli produk ' + item.title + '. Boleh minta informasi selengkapnya? /n /n ' + '/products/'+item.category+'/' + item.title.replaceAll(' ', '-')"
                                         class="btn btn-success m-2" target="_blank">Pesan</a>
                                 </div>
                             </div>
