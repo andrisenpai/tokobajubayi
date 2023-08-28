@@ -49,7 +49,21 @@ export default {
     components: {
         Backpack, Tasanak,
         Taswaist
-    }
+    },
+    methods: {
+        
+        getBackpack(){
+            this.$store.dispatch('backpack/getBackpack')
+        },
+        getTasanak(){
+            this.$store.dispatch('tasanak/getTasanak')
+
+        },
+        getTaswaist(){
+            this.$store.dispatch('taswaist/getTaswaist')
+
+        }
+    },
 }
 </script>
 
