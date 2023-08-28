@@ -1,6 +1,6 @@
 <template>
     <div class="row d-flex">
-        <div class="col-md-4 mt-3 mb-3 d-flex" v-for="(item, index) in backpackData" :key="item.id"
+        <div class="col-md-4 mt-3 mb-3 d-flex" v-for="(item, index) in tasWaistData" :key="item.id"
             v-if="index < showProduct">
             <div class="card">
                 <div class="card-num">{{index+1}}</div>
@@ -33,8 +33,12 @@
 export default {
     data() {
         return {
-            backpackData: this.$store.getters['taswaist/taswaist'],
             showProduct: 6
+        }
+    },
+    computed:{
+        tasWaistData(){
+            return this.$store.getters['taswaist/taswaist']
         }
     },
     async fetch(){

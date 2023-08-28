@@ -51,7 +51,7 @@ export default {
         Taswaist
     },
     methods: {
-        
+
         getBackpack(){
             this.$store.dispatch('backpack/getBackpack')
         },

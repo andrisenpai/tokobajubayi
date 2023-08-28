@@ -96,7 +96,7 @@ export default {
         //    return titleEnc
         // }
     },
-    mounted() {
+    created() {
         this.slide()
         this.showData()
     },

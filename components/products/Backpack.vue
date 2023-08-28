@@ -33,8 +33,12 @@
 export default {
     data() {
         return {
-            backpackData: this.$store.getters['backpack/backpack'],
             showProduct: 6
+        }
+    },
+    computed:{
+        backpackData(){
+            return this.$store.getters['backpack/backpack']
         }
     },
     async fetch(){
