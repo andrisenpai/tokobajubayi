@@ -1,8 +1,8 @@
 <template>
     <div>
-        <nav class="navbar navbar-expand-lg bg-custom shadow-md" :class="position">
+        <nav class="navbar navbar-expand-lg bg-custom shadow" :class="position">
             <div class="container">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/">
                     <img src="/girl.png" alt="Bootstrap" width="30" height="24"><span class="ms-1 logo-text">Adiba</span><span class="logo-text" style="color: #4682A9;text-shadow: 0px -1px #000;">Store</span> 
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"

@@ -1,7 +1,9 @@
 <template>
     <div>
-        <Header />
+        <Header class="mb-5" />
         <Nuxt keep-alive/>
-        <Footer />
+        <Promo />
+        <Payment />
+        <Footer class="mt-5" />
     </div>
 </template>

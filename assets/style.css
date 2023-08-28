@@ -49,7 +49,7 @@ body {
 }
 
 .bg-custom {
-    background-color: whitesmoke !important;
+    background-color: white !important;
 }
 
 .bg-pink {
@@ -110,4 +110,18 @@ body {
     border-radius: 0 !important;
     width: 50px !important;
    transition: 0.3s;
+}
+.card-num{
+    position: absolute;
+    background-color: #FF2171;
+    color: white;
+    padding: 4px 12px;
+    border-bottom-right-radius: 10px;
+}
+.promo{
+    width: fit-content;
+    padding: 10px;
+    display: block;
+    background-color: whitesmoke;
+    color: #FF2171;
 }
