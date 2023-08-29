@@ -6,26 +6,35 @@
             <div class="category my-4 mx-2">
                 <ul class="nav nav-tabs justify-content-center sticky-top bg-white pt-2 shadow" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="backpack-tab" data-bs-toggle="tab" data-bs-target="#backpack"
-                            type="button" role="tab" aria-controls="backpack" aria-selected="true">Backpack</button>
+                        <button class="nav-link" id="backpack-tab" data-bs-toggle="tab" data-bs-target="#backpack"
+                            type="button" role="tab" aria-controls="backpack" aria-selected="true"
+                            @click="pushCategory('backpack')"
+                            :class="tabactive == 'backpack' || !tabactive ? ' active' : ' '">Backpack</button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="tasanak-tab" data-bs-toggle="tab" data-bs-target="#tasanak"
-                            type="button" role="tab" aria-controls="tasanak" aria-selected="false">Tas Anak</button>
+                            type="button" role="tab" aria-controls="tasanak" aria-selected="false"
+                            @click="pushCategory('tasanak')" :class="tabactive == 'tasanak' ? ' active' : ' '">Tas
+                            Anak</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
-                            type="button" role="tab" aria-controls="contact" aria-selected="false">Tas Waist</button>
+                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#taswaist"
+                            type="button" role="tab" aria-controls="contact" aria-selected="false"
+                            @click="pushCategory('taswaist')" :class="tabactive == 'taswaist' ? ' active' : ' '">Tas
+                            Waist</button>
                     </li>
                 </ul>
                 <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="backpack" role="tabpanel" aria-labelledby="backpack-tab">
+                    <div class="tab-pane fade" id="backpack" role="tabpanel" aria-labelledby="backpack-tab"
+                        :class="tabactive == 'backpack' || !tabactive ? ' show active' : ' '">
                         <Backpack />
                     </div>
-                    <div class="tab-pane fade" id="tasanak" role="tabpanel" aria-labelledby="tasanak-tab">
+                    <div class="tab-pane fade" id="tasanak" role="tabpanel" aria-labelledby="tasanak-tab"
+                        :class="tabactive == 'tasanak' ? ' show active' : ' '">
                         <Tasanak />
                     </div>
-                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                    <div class="tab-pane fade" id="taswaist" role="tabpanel" aria-labelledby="taswaist-tab"
+                        :class="tabactive == 'taswaist' ? ' show active' : ' '">
                         <Taswaist />
                     </div>
                 </div>
@@ -43,23 +52,28 @@ export default {
     layout: 'layoutWithSidebar',
     data() {
         return {
-            showProduct: 6
+            tabactive: this.$route.query.category
         }
+    },
+    computed: {
     },
     components: {
         Backpack, Tasanak,
         Taswaist
     },
-    methods: {
 
-        getBackpack(){
+    methods: {
+        pushCategory(cat) {
+            this.$router.push({ path: 'products', query: { category: cat } })
+        },
+        getBackpack() {
             this.$store.dispatch('backpack/getBackpack')
         },
-        getTasanak(){
+        getTasanak() {
             this.$store.dispatch('tasanak/getTasanak')
 
         },
-        getTaswaist(){
+        getTaswaist() {
             this.$store.dispatch('taswaist/getTaswaist')
 
         }

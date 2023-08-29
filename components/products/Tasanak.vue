@@ -33,8 +33,7 @@
 export default {
     data() {
         return {
-            
-            showProduct: 6
+            showProduct: 6,
         }
     },
     computed:{
