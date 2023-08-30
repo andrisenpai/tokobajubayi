@@ -1,6 +1,6 @@
 <template>
     <div class="row d-flex">
-        <div class="col-md-4 mt-3 mb-3 d-flex" v-for="(item, index) in tasWaistData" :key="item.id"
+        <div class="col-sm-12 col-md-6 col-lg-4 mt-3 mb-3 d-flex" v-for="(item, index) in tasWaistData" :key="item.id"
             v-if="index < showProduct">
             <div class="card">
                 <div class="card-num">{{index+1}}</div>
@@ -31,14 +31,17 @@
 
 <script>
 export default {
-    data() {
-        return {
-            showProduct: 6,
-        }
-    },
+  data(){
+    return{
+      numb: 6
+    }
+  },
     computed:{
         tasWaistData(){
             return this.$store.getters['taswaist/taswaist']
+        },
+        showProduct(){
+          return this.$store.state.global.loadmore
         }
     },
     async fetch(){
@@ -46,8 +49,8 @@ export default {
     },
     methods: {
         loadmore() {
-            let loadmore = this.showProduct + 3
-            return this.showProduct = loadmore
+            let loadmore = this.$store.commit('global/set_loadmore', (this.showProduct + 3))
+            return loadmore
         },
         async getBackpack(){
             await this.$store.dispatch('taswaist/gettaswaist')

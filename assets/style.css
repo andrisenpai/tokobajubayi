@@ -10,17 +10,19 @@ body {
 
 .nuxt-link-exact-active {
     border-bottom: 3px solid #FF90BB;
+    display: block;
+    width: fit-content;
 }
 
 .divider {
     height: 75px;
-    background-color: whitesmoke;
+    background-color: #91C8E4;
 
 }
 
 .featured .box {
     padding: 10px;
-    border: 1px solid #91C8E4;
+    /* border: 1px solid #91C8E4; */
     border-radius: 10px;
     margin-bottom: 20px;
     min-height: 200px;
@@ -55,7 +57,9 @@ body {
 .bg-pink {
     background-color: #FF2171;
 }
-
+.bg-blue{
+  background-color: #91C8E4;
+}
 .btn-custom {
     background-color: #FF2171;
     color: whitesmoke;
@@ -73,7 +77,9 @@ body {
 .border-pink {
     border: 1px solid #FF2171;
 }
-
+.border-blue{
+  border: 1px solid #91C8E4;
+}
 .strike {
     text-decoration: line-through;
 }

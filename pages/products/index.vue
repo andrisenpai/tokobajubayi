@@ -56,6 +56,7 @@ export default {
         }
     },
     computed: {
+
     },
     components: {
         Backpack, Tasanak,
@@ -64,7 +65,7 @@ export default {
 
     methods: {
         pushCategory(cat) {
-            this.$router.push({ path: 'products', query: { category: cat } })
+            this.$router.push({ path: 'products', query: { category: cat, page: 6 } })
         },
         getBackpack() {
             this.$store.dispatch('backpack/getBackpack')

@@ -14,11 +14,11 @@
                 </div>
             </div>
         </div>
-        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center container mx-auto">
-            <div class="col">
-                <div class="card mb-4 rounded-3 shadow-sm">
-                    <div class="card-header py-3">
-                        <h4 class="my-0 fw-normal">Member</h4>
+        <div class="row d-flex mb-3 text-center container mx-auto">
+            <div class="col-lg-4 col-md-6 d-flex">
+                <div class="card mb-4 rounded-3 shadow-sm border-blue w-100">
+                    <div class="card-header py-3 bg-blue">
+                        <h4 class="my-0 fw-normal text-white">Member</h4>
                     </div>
                     <div class="card-body">
                         <h1 class="card-title pricing-card-title">GRATIS<small class="text-muted fw-light"></small></h1>
@@ -29,10 +29,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card mb-4 rounded-3 shadow-sm">
-                    <div class="card-header py-3">
-                        <h4 class="my-0 fw-normal">Dropshiper</h4>
+            <div class="col-lg-4 col-md-6 d-flex">
+                <div class="card mb-4 rounded-3 shadow-sm border-blue w-100">
+                    <div class="card-header py-3 bg-blue">
+                        <h4 class="my-0 fw-normal text-white">Dropshiper</h4>
                     </div>
                     <div class="card-body">
                         <h1 class="card-title pricing-card-title">Rp 75.000,00<small class="text-muted fw-light">/6 Bulan</small></h1>
@@ -45,12 +45,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card mb-4 rounded-3 shadow-sm border-pink">
+            <div class="col-lg-4 col-md-6 d-flex">
+                <div class="card mb-4 rounded-3 shadow-sm border-pink w-100">
                     <div class="card-header py-3 text-white bg-pink border-pink">
                         <h4 class="my-0 fw-normal">Reseller</h4>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body no-border">
                         <h1 class="card-title pricing-card-title">SYARAT<small class="text-muted fw-light"></small></h1>
                         <ul class="list-unstyled mt-3 mb-4">
                             <li>Minimal Belanja 5 Pcs</li>

@@ -1,6 +1,6 @@
 <template>
     <div class="row d-flex">
-        <div class="col-md-4 mt-3 mb-3 d-flex" v-for="(item, index) in backpackData" :key="item.id"
+        <div class="col-sm-12 col-md-6 col-lg-4 mt-3 mb-3 d-flex" v-for="(item, index) in backpackData" :key="item.id"
             v-if="index < showProduct">
             <div class="card">
                 <div class="card-num">{{index+1}}</div>
@@ -33,21 +33,24 @@
 export default {
     data() {
         return {
-            showProduct:6,
+          numb: 6,
         }
     },
     computed:{
         backpackData(){
             return this.$store.getters['backpack/backpack']
+        },
+        showProduct(){
+          return this.$store.state.global.loadmore
         }
     },
     async fetch(){
         await this.$store.dispatch('backpack/getBackpack')
     },
     methods: {
-        loadmore() {
-            let loadmore = this.showProduct + 3
-            return this.showProduct = loadmore
+      loadmore() {
+            let loadmore = this.$store.commit('global/set_loadmore', (this.showProduct + 3))
+            return loadmore
         },
         async getBackpack(){
             await this.$store.dispatch('backpack/getBackpack')
