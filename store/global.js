@@ -63,16 +63,6 @@ export const actions = {
         tempFeatured.splice(findIndex,1)
         tempFeatured = tempFeatured
       }
-      console.log(randomFeatured)
-
-      // const groupedData = randomFeatured.reduce((result, item) => {
-      //   if (!result[item.title]) {
-      //     result[item.title] = [];
-      //   }
-      //   result[item.title].push(item);
-      //   return result;
-      // }, {});
-      // console.log(groupedData)
       commit('set_featured', randomFeatured)
     } catch (error) {
       console.error('error data :', error)

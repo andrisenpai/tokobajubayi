@@ -3,7 +3,7 @@
     <div v-for="item in detailData" v-if="item.title == compare">
       <div class="row">
         <div class="col-12">
-          <div class="title mb-4">{{ item.title }}</div>
+          <h1 class="title mb-4">{{ item.title }}</h1>
         </div>
         <div class="row">
           <div class="col-md-4">
@@ -37,193 +37,195 @@
             <Promo v-if="$route.params.category !== 'taswaist'" />
             <div class="group-action">
               <a :href="'https://api.whatsapp.com/send?phone=6281320453725' + '&text=Hallo Adiba Store ! Saya ingin membeli produk ' + item.title + '. Boleh minta informasi selengkapnya? /n /n ' + '/products/' + item.category + '/' + item.title.replaceAll(' ', '-')"
-                class="btn btn-success" target="_blank">Pesan</a>
+                class="btn btn-success" target="_blank">Pesan Sekarang</a>
+                <nuxt-link :to="'/products?category=' + $route.params.category + '&page=6' " class="btn btn-info text-white">Lihat Lainnya</nuxt-link>
             </div>
           </div>
         </div>
       </div>
 
     </div>
+
+    <div class="related-products">
+      <RelatedProducts/>
+    </div>
   </div>
 </template>
 
 <script>
-
-
+import RelatedProducts from '../../../components/RelatedProducts.vue'
 export default {
-  layout: 'detailLayout',
-  head() {
-    return {
-      title: this.compare
-    }
-
-  },
-  data() {
-    return {
-      detailData: [],
-      dataSlide: '',
-      responsiveClass: true,
-      responsive: {
-        0: {
-          items: 1,
-          nav: true,
-          autoHeight: true
+    layout: 'detailLayout',
+    head() {
+        return {
+            title: this.compare
+        };
+    },
+    data() {
+        return {
+            detailData: [],
+            dataSlide: '',
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true,
+                    autoHeight: true
+                },
+                600: {
+                    items: 1,
+                    nav: false,
+                    autoHeight: true
+                },
+                1000: {
+                    items: 1,
+                    nav: true,
+                    loop: true,
+                    autoHeight: true
+                }
+            }
+        };
+    },
+    computed: {
+        compare() {
+            let titleEnc = this.$route.params.detail;
+            let title = titleEnc.replaceAll('-', ' ');
+            return title;
         },
-        600: {
-          items: 1,
-          nav: false,
-          autoHeight: true
+        // title(){
+        //    let titleEnc = this.$route.params.detail
+        //    return titleEnc
+        // }
+    },
+    created() {
+        this.slide();
+        this.showData();
+    },
+    methods: {
+        slide() {
         },
-        1000: {
-          items: 1,
-          nav: true,
-          loop: true,
-          autoHeight: true
+        async showData() {
+            let category = this.$route.params.category;
+            if (category == 'backpack') {
+                await this.$store.dispatch('backpack/getBackpack');
+                this.detailData = this.$store.getters['backpack/backpack'];
+                let slide = this.detailData;
+                slide.forEach(element => {
+                    if (element.title == this.compare) {
+                        this.dataSlide = [
+                            {
+                                id: 1,
+                                image: element.image_link_1
+                            },
+                            {
+                                id: 2,
+                                image: element.image_link_2
+                            },
+                            {
+                                id: 3,
+                                image: element.image_link_3
+                            },
+                            {
+                                id: 4,
+                                image: element.image_link_4
+                            },
+                            {
+                                id: 5,
+                                image: element.image_link_5
+                            },
+                            {
+                                id: 6,
+                                image: element.image_link_6
+                            },
+                            {
+                                id: 7,
+                                image: element.image_link_7
+                            },
+                        ];
+                    }
+                });
+            }
+            else if (category == 'tasanak') {
+                await this.$store.dispatch('tasanak/getTasanak');
+                this.detailData = this.$store.getters['tasanak/tasanak'];
+                let slide = this.detailData;
+                slide.forEach(element => {
+                    if (element.title == this.compare) {
+                        this.dataSlide = [
+                            {
+                                id: 1,
+                                image: element.image_link_1
+                            },
+                            {
+                                id: 2,
+                                image: element.image_link_2
+                            },
+                            {
+                                id: 3,
+                                image: element.image_link_3
+                            },
+                            {
+                                id: 4,
+                                image: element.image_link_4
+                            },
+                            {
+                                id: 5,
+                                image: element.image_link_5
+                            },
+                            {
+                                id: 6,
+                                image: element.image_link_6
+                            },
+                            {
+                                id: 7,
+                                image: element.image_link_7
+                            },
+                        ];
+                    }
+                });
+            }
+            else if (category == 'taswaist') {
+                await this.$store.dispatch('taswaist/getTaswaist');
+                this.detailData = this.$store.getters['taswaist/taswaist'];
+                let slide = this.detailData;
+                slide.forEach(element => {
+                    if (element.title == this.compare) {
+                        this.dataSlide = [
+                            {
+                                id: 1,
+                                image: element.image_link_1
+                            },
+                            {
+                                id: 2,
+                                image: element.image_link_2
+                            },
+                            {
+                                id: 3,
+                                image: element.image_link_3
+                            },
+                            {
+                                id: 4,
+                                image: element.image_link_4
+                            },
+                            {
+                                id: 5,
+                                image: element.image_link_5
+                            },
+                            {
+                                id: 6,
+                                image: element.image_link_6
+                            },
+                            {
+                                id: 7,
+                                image: element.image_link_7
+                            },
+                        ];
+                    }
+                });
+            }
         }
-      }
-
-
-    }
-  },
-  computed: {
-    compare() {
-      let titleEnc = this.$route.params.detail
-      let title = titleEnc.replaceAll('-', ' ')
-      return title
     },
-
-    // title(){
-    //    let titleEnc = this.$route.params.detail
-    //    return titleEnc
-    // }
-  },
-  created() {
-    this.slide()
-    this.showData()
-  },
-  methods: {
-    slide() {
-
-    },
-    async showData() {
-      let category = this.$route.params.category;
-      if (category == 'backpack') {
-        await this.$store.dispatch('backpack/getBackpack')
-        this.detailData = this.$store.getters['backpack/backpack']
-        let slide = this.detailData
-        slide.forEach(element => {
-          if (element.title == this.compare) {
-            this.dataSlide = [
-              {
-                id: 1,
-                image: element.image_link_1
-              },
-              {
-                id: 2,
-                image: element.image_link_2
-              },
-              {
-                id: 3,
-                image: element.image_link_3
-              },
-              {
-                id: 4,
-                image: element.image_link_4
-              },
-              {
-                id: 5,
-                image: element.image_link_5
-              },
-              {
-                id: 6,
-                image: element.image_link_6
-              },
-              {
-                id: 7,
-                image: element.image_link_7
-              },
-            ]
-          }
-        });
-      } else if (category == 'tasanak') {
-        await this.$store.dispatch('tasanak/getTasanak')
-        this.detailData = this.$store.getters['tasanak/tasanak']
-        let slide = this.detailData
-        slide.forEach(element => {
-          if (element.title == this.compare) {
-            this.dataSlide = [
-              {
-                id: 1,
-                image: element.image_link_1
-              },
-              {
-                id: 2,
-                image: element.image_link_2
-              },
-              {
-                id: 3,
-                image: element.image_link_3
-              },
-              {
-                id: 4,
-                image: element.image_link_4
-              },
-              {
-                id: 5,
-                image: element.image_link_5
-              },
-              {
-                id: 6,
-                image: element.image_link_6
-              },
-              {
-                id: 7,
-                image: element.image_link_7
-              },
-            ]
-          }
-        });
-      } else if (category == 'taswaist') {
-        await this.$store.dispatch('taswaist/getTaswaist')
-        this.detailData = this.$store.getters['taswaist/taswaist']
-        let slide = this.detailData
-        slide.forEach(element => {
-          if (element.title == this.compare) {
-            this.dataSlide = [
-              {
-                id: 1,
-                image: element.image_link_1
-              },
-              {
-                id: 2,
-                image: element.image_link_2
-              },
-              {
-                id: 3,
-                image: element.image_link_3
-              },
-              {
-                id: 4,
-                image: element.image_link_4
-              },
-              {
-                id: 5,
-                image: element.image_link_5
-              },
-              {
-                id: 6,
-                image: element.image_link_6
-              },
-              {
-                id: 7,
-                image: element.image_link_7
-              },
-            ]
-          }
-        });
-      }
-    }
-  },
+    components: { RelatedProducts }
 }
 </script>
 

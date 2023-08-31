@@ -16,11 +16,9 @@
             </p>
           </div>
         </nuxt-link>
-
-
       </div>
-
     </carousel>
+    <nuxt-link to="/products" class="btn btn-custom mx-auto d-block" style="width: fit-content;">Lihat Katalog</nuxt-link>
   </div>
 </template>
 
