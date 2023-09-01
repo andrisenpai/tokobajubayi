@@ -25,7 +25,8 @@ export default {
     ],
 
     script: [
-      { src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js' }
+      { src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js' },
+
     ]
   },
 
@@ -49,7 +50,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/axios', '@nuxtjs/proxy', '@nuxt/image','@nuxtjs/sitemap'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/proxy', '@nuxt/image','@nuxtjs/sitemap','@nuxtjs/google-analytics'],
   // http://localhost:3000/products/taswaist/Tas-Waist-Bag-Pria-Outvin-TL-706?taswaist40
   sitemap: {
     hostname: 'https://backpacku.my.id',
@@ -67,5 +68,8 @@ export default {
   ],
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+  googleAnalytics: {
+    id: 'AW-693433591'
   }
 }
