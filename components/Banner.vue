@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- carousel -->
-        <div id="carouselBanner" class="carousel carousel-dark slide mt-5" data-bs-ride="carousel">
+        <div id="carouselBanner" class="carousel carousel-dark slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
@@ -10,25 +10,25 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="10000">
-                    <img src="~/assets/banner/banner1.jpg" class="d-block w-100 banner-img" alt="Banner 1">
-                    <div class="carousel-caption d-none d-md-block">
+                    <img src="~/assets/banner/tasanak.jpg" class="d-block w-100 banner-img" alt="Banner 1">
+                    <!-- <div class="carousel-caption d-none d-md-block">
                         <h5>First slide label</h5>
                         <p>Some representative placeholder content for the first slide.</p>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="carousel-item" data-bs-interval="2000">
-                    <img src="~/assets/banner/banner1.jpg" class="d-block w-100 banner-img" alt="Banner 2">
-                    <div class="carousel-caption d-none d-md-block">
+                    <img src="~/assets/banner/tasransel.jpg" class="d-block w-100 banner-img" alt="Banner 2">
+                    <!-- <div class="carousel-caption d-none d-md-block">
                         <h5>Second slide label</h5>
                         <p>Some representative placeholder content for the second slide.</p>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="carousel-item">
-                    <img src="~/assets/banner/banner1.jpg" class="d-block w-100 banner-img" alt="Banner 3">
-                    <div class="carousel-caption d-none d-md-block">
+                    <img src="~/assets/banner/taswaist.jpg" class="d-block w-100 banner-img" alt="Banner 3">
+                    <!-- <div class="carousel-caption d-none d-md-block">
                         <h5>Third slide label</h5>
                         <p>Some representative placeholder content for the third slide.</p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselBanner" data-bs-slide="prev">
@@ -66,5 +66,13 @@
 }
 .carousel-dark .carousel-indicators [data-bs-target]{
     background-color: #4682A9;
+}
+@media only screen and (max-width: 600px) {
+  .carousel-inner{
+    height: 30vh!important;
+  }
+  .banner-img{
+    height: 30vh;
+  }
 }
 </style>

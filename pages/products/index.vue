@@ -27,14 +27,17 @@
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade" id="backpack" role="tabpanel" aria-labelledby="backpack-tab"
                         :class="tabactive == 'backpack' || !tabactive ? ' show active' : ' '">
+                        <BannerCategory imageBanner="tasransel"/>
                         <Backpack />
                     </div>
                     <div class="tab-pane fade" id="tasanak" role="tabpanel" aria-labelledby="tasanak-tab"
                         :class="tabactive == 'tasanak' ? ' show active' : ' '">
+                        <BannerCategory imageBanner="tasanak"/>
                         <Tasanak />
                     </div>
                     <div class="tab-pane fade" id="taswaist" role="tabpanel" aria-labelledby="taswaist-tab"
                         :class="tabactive == 'taswaist' ? ' show active' : ' '">
+                        <BannerCategory imageBanner="taswaist"/>
                         <Taswaist />
                     </div>
                 </div>
@@ -44,6 +47,8 @@
     </div>
 </template>
 <script>
+import BannerCategory from '../../components/BannerCategory.vue';
+import BannerSingle from '../../components/BannerSingle.vue';
 import Backpack from '../../components/products/Backpack.vue';
 import Tasanak from '../../components/products/Tasanak.vue';
 import Taswaist from '../../components/products/Taswaist.vue';
@@ -59,9 +64,11 @@ export default {
 
     },
     components: {
-        Backpack, Tasanak,
-        Taswaist
-    },
+    Backpack, Tasanak,
+    Taswaist,
+    BannerSingle,
+    BannerCategory
+},
 
     methods: {
         pushCategory(cat) {

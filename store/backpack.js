@@ -18,7 +18,6 @@ export const mutations = {
       tempProduct.splice(findIndex, 1)
       tempProduct = tempProduct
     }
-    console.log(randomProduct)
     state.relatedProduct = randomProduct
   }
 }

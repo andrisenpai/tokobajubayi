@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Header :position="position"/>
+        <Header />
         <Nuxt />
         <Footer />
     </div>
